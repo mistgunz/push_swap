@@ -2,7 +2,7 @@ NAME = push_swap
 SRCS =  $(wildcard *.c)
 
 OBJS = ${SRCS:.c=.o}
-CHECK_OBJS = ${CHECK_SRCS:.c=.o}
+
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -Iincludes
@@ -14,16 +14,12 @@ ${NAME}: ${OBJS}
 	@${MAKE} -C ./libft
 	@${CC} ${CFLAGS} ${OBJS} ./libft/libft.a -o ${NAME}
 
-
-
 clean: 
 	@${MAKE} -C ./libft fclean
 	@${RM} ${OBJS}
-	@${RM} ${CHECK_OBJS}
 
 fclean: clean
 	@${RM} ${NAME}
-	@${RM} ${CHECK}
 
 re: fclean all
 
