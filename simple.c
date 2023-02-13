@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   simple.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rnait-el <rnait-el@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/13 05:51:38 by rnait-el          #+#    #+#             */
+/*   Updated: 2023/02/13 06:53:17 by rnait-el         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static int	get_min(t_list **stack, int val)
@@ -118,4 +130,3 @@ void	simple_sort(t_list **stack_a, t_list **stack_b)
 	else if (size == 5)
 		sort_5(stack_a, stack_b);
 }
-

@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   radix.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rnait-el <rnait-el@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/13 05:51:25 by rnait-el          #+#    #+#             */
+/*   Updated: 2023/02/13 06:12:53 by rnait-el         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
-#include <stdio.h>
 
 static int	get_max_bits(t_list **stack)
 {
@@ -33,7 +44,6 @@ void	radix_sort(t_list **stack_a, t_list **stack_b)
 	head_a = *stack_a;
 	size = ft_lstsize(head_a);
 	max_bits = get_max_bits(stack_a);
-	printf("maxbit%d",max_bits);
 	while (i < max_bits)
 	{
 		j = 0;

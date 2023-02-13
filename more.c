@@ -1,4 +1,16 @@
-# include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   more.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rnait-el <rnait-el@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/13 05:51:16 by rnait-el          #+#    #+#             */
+/*   Updated: 2023/02/13 06:56:24 by rnait-el         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
 
 int	ft_atol(char *str)
 {
@@ -24,4 +36,19 @@ int	ft_atol(char *str)
 	else if ((num * neg) < INT_MIN)
 		ft_error();
 	return (num * neg);
+}
+
+void	free_stack(t_list **stack)
+{
+	t_list	*head;
+	t_list	*tmp;
+
+	head = *stack;
+	while (head)
+	{
+		tmp = head;
+		head = head->next;
+		free(tmp);
+	}
+	free(stack);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checks.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rnait-el <rnait-el@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/13 05:50:32 by rnait-el          #+#    #+#             */
+/*   Updated: 2023/02/13 05:52:19 by rnait-el         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static int	ft_contains(int num, char **argv, int i)
@@ -19,6 +31,8 @@ static int	ft_isnum(char *num)
 	i = 0;
 	if (num[0] == '-')
 		i++;
+	if (!num[i])
+		ft_error();
 	while (num[i])
 	{
 		if (!ft_isdigit(num[i]))
@@ -42,8 +56,6 @@ void	ft_check_args(char **argv)
 		if (!ft_isnum(args[i]))
 			ft_error();
 		if (ft_contains(tmp, args, i))
-			ft_error();
-		if (tmp < INT_MIN || tmp > INT_MAX)
 			ft_error();
 		i++;
 	}

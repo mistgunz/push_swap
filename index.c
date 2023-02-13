@@ -1,24 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   index.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rnait-el <rnait-el@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/13 05:50:42 by rnait-el          #+#    #+#             */
+/*   Updated: 2023/02/13 05:59:24 by rnait-el         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static t_list	*get_next_min(t_list **stack)
 {
-	t_list	*head;
+	t_list	*h;
 	t_list	*min;
 	int		has_min;
 
 	min = NULL;
 	has_min = 0;
-	head = *stack;
-	if (head)
+	h = *stack;
+	if (h)
 	{
-		while (head)
+		while (h)
 		{
-			if ((head->index == -1) && (!has_min || head->content < min->content))
+			if ((h->index == -1) && (!has_min || h->content < min->content))
 			{
-				min = head;
+				min = h;
 				has_min = 1;
 			}
-			head = head->next;
+			h = h->next;
 		}
 	}
 	return (min);

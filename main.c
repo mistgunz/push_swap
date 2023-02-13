@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rnait-el <rnait-el@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/13 05:51:07 by rnait-el          #+#    #+#             */
+/*   Updated: 2023/02/13 06:10:31 by rnait-el         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void	initStack(t_list **stack, char **argv)
+void	initstack(t_list **stack, char **argv)
 {
 	t_list	*new;
 	char	**args;
@@ -37,7 +49,7 @@ int	main(int argc, char **argv)
 	stack_b = (t_list **)malloc(sizeof(t_list));
 	*stack_a = NULL;
 	*stack_b = NULL;
-	initStack(stack_a, argv);
+	initstack(stack_a, argv);
 	if (is_sorted(stack_a))
 	{
 		free_stack(stack_a);

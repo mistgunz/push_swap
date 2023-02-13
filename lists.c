@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lists.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rnait-el <rnait-el@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/13 05:51:02 by rnait-el          #+#    #+#             */
+/*   Updated: 2023/02/13 06:03:15 by rnait-el         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_list	*ft_lstnew(int content)
@@ -20,7 +32,7 @@ void	ft_lstadd_front(t_list **stack, t_list *new)
 	new->next = *stack;
 	*stack = new;
 }
- 
+
 t_list	*ft_lstlast(t_list *head)
 {
 	t_list	*tmp;
