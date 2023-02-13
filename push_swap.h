@@ -1,10 +1,10 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "/libft/libft.h"
-# include <limits.h>
 
-// Stack
+# include <limits.h>
+# include "./libft/libft.h"
+
 typedef struct s_list
 {
 	int				content;
@@ -12,14 +12,14 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_list;
 
-// Util functions
 t_list	*ft_lstnew(int content);
 t_list	*ft_lstlast(t_list *head);
 void	ft_lstadd_front(t_list **stack, t_list *new);
 void	ft_lstadd_back(t_list **stack, t_list *new);
-void	printList(t_list *head);
+void	printList(t_list *head); //must remove
 int		ft_lstsize(t_list *head);
 
+int		ft_atol(char *str);
 void	ft_error(void);
 void	ft_check_args(char **argv);
 int		is_sorted(t_list **stack);
@@ -28,13 +28,11 @@ void	make_top(t_list **stack, int distance);
 void	free_stack(t_list **stack);
 void	ft_free(char **str);
 
-// Algorithm utils
 void	radix_sort(t_list **stack_a, t_list **stack_b);
 void	simple_sort(t_list **stack_a, t_list **stack_b);
 void	index_stack(t_list **stack);
 void	sort_5(t_list **stack_a, t_list **stack_b);
 
-// Instruction functions
 int		swap(t_list **stack);
 int		push(t_list **stack_to, t_list **stack_from);
 int		rotate(t_list **stack);
