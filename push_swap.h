@@ -6,7 +6,7 @@
 /*   By: rnait-el <rnait-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 05:51:31 by rnait-el          #+#    #+#             */
-/*   Updated: 2023/02/13 06:42:25 by rnait-el         ###   ########.fr       */
+/*   Updated: 2023/02/13 07:14:47 by rnait-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,7 @@ int		rr(t_list **stack_a, t_list **stack_b);
 int		rra(t_list **stack_a);
 int		rrb(t_list **stack_b);
 int		rrr(t_list **stack_a, t_list **stack_b);
+void	do_op(t_list **stack_a);
+void	do_op_two(t_list **stack_a);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: rnait-el <rnait-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 05:51:38 by rnait-el          #+#    #+#             */
-/*   Updated: 2023/02/13 06:53:17 by rnait-el         ###   ########.fr       */
+/*   Updated: 2023/02/13 07:12:48 by rnait-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,7 @@ static void	sort_3(t_list **stack_a)
 	if (is_sorted(stack_a))
 		return ;
 	if (head->index == min && head->next->index != next_min)
-	{
-		ra(stack_a);
-		sa(stack_a);
-		rra(stack_a);
-	}
+		do_op(stack_a);
 	else if (head->index == next_min)
 	{
 		if (head->next->index == min)
@@ -57,10 +53,7 @@ static void	sort_3(t_list **stack_a)
 		if (head->next->index == min)
 			ra(stack_a);
 		else
-		{
-			sa(stack_a);
-			rra(stack_a);
-		}
+			do_op_two(stack_a);
 	}
 }
 

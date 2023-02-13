@@ -6,7 +6,7 @@
 /*   By: rnait-el <rnait-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 05:51:16 by rnait-el          #+#    #+#             */
-/*   Updated: 2023/02/13 06:56:24 by rnait-el         ###   ########.fr       */
+/*   Updated: 2023/02/13 07:12:25 by rnait-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,17 @@ void	free_stack(t_list **stack)
 		free(tmp);
 	}
 	free(stack);
+}
+
+void	do_op(t_list **stack_a)
+{
+	ra(stack_a);
+	sa(stack_a);
+	rra(stack_a);
+}
+
+void	do_op_two(t_list **stack_a)
+{
+	sa(stack_a);
+	rra(stack_a);
 }
